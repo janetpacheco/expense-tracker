@@ -5,13 +5,13 @@ function App() {
       id: 'e1',
       title: 'Whole Wheat Bread',
       amount: 1.67,
-      date: new Date(2022, 9, 24),
+      date: new Date(2022, 8, 24),
     },
     { 
       id: 'e2', 
       title: 'Winter Boots', 
       amount: 125.98, 
-      date: new Date(2022, 9, 10) },
+      date: new Date(2022, 8, 10) },
     {
       id: 'e3',
       title: 'Car Insurance',
