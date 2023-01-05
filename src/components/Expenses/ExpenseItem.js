@@ -9,7 +9,7 @@ function ExpenseItem(props) {
         <li>
         <Card className='expense-item'>
             <ExpenseDate date={props.date}/>            
-            <div className='expense-item__description'>
+            <div className='expense-item'>
                 <h2>{props.title}</h2>
                 <div className='expense-item__description'>{props.store}</div>
                 <div className='expense-item__price'>${props.amount}</div>

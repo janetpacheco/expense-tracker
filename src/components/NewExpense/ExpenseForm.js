@@ -19,12 +19,13 @@ const ExpenseForm = (props) =>{
     const titleChangeHandler = (event) =>{
         setEnteredTitle(event.target.value);
         
+        // Updating title not recommend way
         // setUserInput({
         //     ...userInput,
         //     enteredTitle: event.target.value,
         // });
 
-        // Asure the lastest state snapshot 
+        // Ensure the lastest state snapshot 
         // setUserInput((prevState) => {
         //    return {...prevState,enteredTitle:event.target.value}; 
         // });
@@ -62,7 +63,7 @@ const ExpenseForm = (props) =>{
         const expenseData = {
             title: enteredTitle,
             store: enteredStore,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate)
         };
         props.onSaveExpenseData(expenseData);
@@ -115,6 +116,7 @@ const ExpenseForm = (props) =>{
             
             </div> 
             <div className='new-expense__actions'>
+                <button type='button' onClick={props.onCancel}>Cancel</button>
                 <button type='submit'>
                     Add Expense
                 </button>
